@@ -9,4 +9,9 @@ public class Bds extends Livre {
     public String getPays() {
         return pays;
     }
+
+    public void afficher(){
+        super.afficher();
+        System.out.println(" |Pays :"+this.getPays());
+    }
 }

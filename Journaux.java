@@ -5,4 +5,17 @@ public class Journaux extends Livre {
         super(titre,auteur,anneePublication);
         this.marque = marque;
     }
+
+    public String getMarque(){
+        return this.marque;
+    }
+
+    public void setMarque(String marque){
+        this.marque = marque;
+    }
+
+    public void afficher(){
+        super.afficher();
+        System.out.println(" |Marque :"+this.getMarque());
+    }
 }

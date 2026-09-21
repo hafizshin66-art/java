@@ -22,4 +22,7 @@ public class Livre {
         return anneePublication;
     }
 
+    public void afficher(){
+        System.out.println("Titre: "+this.getTitre()+" |Auteur: "+this.getAuteur()+" |Année: "+this.getAnneePublication());
+    }
 }

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+
+
+>>>>>>> fa1fedf (kekekek)
 public class Bibliotheque {
     public String nom;
     public ArrayList<Livre> livres;
