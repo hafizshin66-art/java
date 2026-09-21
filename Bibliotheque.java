@@ -21,4 +21,13 @@ public class Bibliotheque {
             l.afficher();
         }
     }
+
+    public String rechercheTitre(String t){
+        for(Livre l : livres){
+            if(l.getTitre().equals(t)){
+                return l.getAuteur();
+            }
+        }
+        return null;
+    }
 }
