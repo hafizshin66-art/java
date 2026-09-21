@@ -16,7 +16,7 @@ public class Emprunteur {
     }
 
     public void afficher(){
-        System.out.println(" Liste des livres emprunter"+this.nom+" :");
+        System.out.println(this.nom+" Liste des livres emprunter :");
         for(Livre l : livreEmprunter){
             l.afficher();
         }

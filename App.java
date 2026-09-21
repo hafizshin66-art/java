@@ -13,6 +13,15 @@ public class App {
 
         rnt.affichageListe();
 
+        Emprunteur e1 = new Emprunteur("Hafiz", 20);
+
+        rnt.ajouterEmprenteur(e1);
+        e1.ajouterLivre(bd1);
+        rnt.affichageListEmprunteur();
+        bd1.emprunter();
+        bd1.emprunter();
+
+        
         
     }
 }
