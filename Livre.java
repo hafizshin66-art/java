@@ -25,4 +25,13 @@ public class Livre {
     public void afficher(){
         System.out.println("Titre: "+this.getTitre()+" |Auteur: "+this.getAuteur()+" |Année: "+this.getAnneePublication());
     }
+    private boolean disponible = true;
+    public void emprunter() {
+        if (disponible) {
+            disponible = false;
+            System.out.println("Le livre '" + titre + "' a été emprunté.");
+        } else {
+            System.out.println("Le livre '" + titre + "' n'est pas disponible pour le moment.");
+        }
+    }
 }
