@@ -3,6 +3,7 @@ public class Livre {
     private String titre;
     private String auteur;
     private int anneePublication;
+    private boolean disponible = true;
 
     public Livre(String titre, String auteur, int anneePublication) {
         this.titre = titre;
@@ -25,7 +26,7 @@ public class Livre {
     public void afficher(){
         System.out.println("Titre: "+this.getTitre()+" |Auteur: "+this.getAuteur()+" |Année: "+this.getAnneePublication());
     }
-    private boolean disponible = true;
+    
     public void emprunter() {
         if (disponible) {
             disponible = false;
