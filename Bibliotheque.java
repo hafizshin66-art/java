@@ -2,10 +2,12 @@ import java.util.ArrayList;
 public class Bibliotheque {
     public String nom;
     public ArrayList<Livre> livres;
+    public ArrayList<Emprunteur> emprenteurs;
 
     public Bibliotheque(String nom) {
         this.nom = nom;
         this.livres = new ArrayList<Livre>();
+        this.emprenteurs = new ArrayList<Emprunteur>();
     }
 
     public void ajouterLivre(Livre l) {
@@ -29,5 +31,17 @@ public class Bibliotheque {
             }
         }
         return null;
+    }
+    public void ajouterEmprenteur(Emprunteur e) {
+        emprenteurs.add(e);
+    }
+    public void supprimerEmprunteur(Emprunteur e) {
+        emprenteurs.remove(e);
+    }
+    public void affichageListEmprunteur() {
+        System.out.println("Liste des emprunteurs dans la bibliothèque " + nom + ":");
+        for(Emprunteur e : emprenteurs) {
+            e.afficher();
+        }
     }
 }
