@@ -6,6 +6,9 @@ public class App {
         Bds bd1 = new Bds("Naruto","Kishimoto",1995,"Japonais" );
         Journaux j1 = new Journaux("Dua budak bogel","Mstar",2026,"Metro");
         Roman r1 = new Roman("The Odyssey","Homer",133,"Histoire");
+        Exemplaire e1 = new Exemplaire("Neuf","Rayon 1");
+        Exemplaire e2 = new Exemplaire("Bon","Rayon 2");
+        
 
         rnt.ajouterLivre(r1);
         rnt.ajouterLivre(j1);

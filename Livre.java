@@ -14,8 +14,6 @@ public class Livre {
         this.exemplaires = new ArrayList<>();
     }
 
-
-
     public String getTitre() {
         return titre;
     }
