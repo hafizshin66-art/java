@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-
-public class Livre {
+import java.io.Serializable;
+public class Livre implements Serializable{
     private String titre;
     private String auteur;
     private int anneePublication;

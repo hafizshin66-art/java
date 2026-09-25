@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Emprunteur {
+public class Emprunteur implements Serializable {
     String nom;
     int age;
     public ArrayList<Livre> livreEmprunter;

@@ -14,7 +14,5 @@ public class Bds extends Livre {
         super.afficher();
         System.out.println(" |Pays :"+this.getPays());
     }
-    public void ajoutExemplaire(Exemplaire e){
-        this.exemplaires.add(e);
-    }
+
 }

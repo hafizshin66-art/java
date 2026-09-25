@@ -1,4 +1,5 @@
-public class Exemplaire {
+import java.io.Serializable;
+public class Exemplaire implements Serializable {
     public String etat;
     public String emplacement;
 

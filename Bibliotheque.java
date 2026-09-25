@@ -1,5 +1,11 @@
 import java.util.ArrayList;
-public class Bibliotheque {
+import java.io.Serializable;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.FileOutputStream;
+
+public class Bibliotheque implements Serializable {
     public String nom;
     public ArrayList<Livre> livres;
     public ArrayList<Emprunteur> emprenteurs;
@@ -44,4 +50,31 @@ public class Bibliotheque {
             e.afficher();
         }
     }
+    public void sauvegarder(String nomFichier) {
+     try {
+         FileOutputStream fos = new FileOutputStream(nomFichier);
+         ObjectOutputStream oos = new ObjectOutputStream(fos);
+         oos.writeObject(this);
+         oos.close();
+         fos.close();
+     } catch (java.io.IOException e) {
+           e.printStackTrace();
+   }
+    }
+    public static Bibliotheque charger(String Fichier) {
+     try {
+         FileInputStream fis = new FileInputStream(Fichier);
+         ObjectInputStream ois = new ObjectInputStream(fis);
+         Bibliotheque bibliotheque = (Bibliotheque) ois.readObject();
+
+         ois.close();
+         fis.close();
+
+         return bibliotheque;
+     } catch (Exception e) {
+           e.printStackTrace();
+           return null;
+   }
+
+}
 }
